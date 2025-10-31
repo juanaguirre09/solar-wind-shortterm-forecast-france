@@ -98,13 +98,3 @@ Points around the diagonal indicate accurate predictions; dispersion shows varia
 
 ---
 
-## 6. Reproducibility
-
-```bash
-# Clone the repository
-git clone https://github.com/juanaguirre09/solar-wind-forecast.git
-cd solar-wind-forecast
-
-# Place the Kaggle dataset in the same folder
-# Run the script
-python project_v5.py
