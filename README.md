@@ -1,4 +1,4 @@
-# ☀️💨 Solar–Wind Short-Term Forecast (French Grid)
+# Solar–Wind Short-Term Forecast (French Grid)
 **Probabilistic +1 h / +24 h renewable-power prediction**
 
 [![Watch the project video](https://img.shields.io/badge/Watch_on_YouTube-red?logo=youtube)](https://youtu.be/07ljskwOW_8)
@@ -7,14 +7,14 @@
 
 ---
 
-## 📘 Overview
+## Overview
 This project builds *hour-ahead* and *day-ahead* forecasts of solar and wind generation for mainland France.  
 A **Quantile Gradient-Boosting Regressor (QGBR)** produces probabilistic predictions (q10–q90) instead of single-point values, giving both accuracy and uncertainty estimation.  
 All outputs are visualized in Tableau for interactive exploration.
 
 ---
 
-## 📁 Repository contents
+## Repository contents
 
 | Path | Description |
 |------|--------------|
@@ -26,7 +26,7 @@ All outputs are visualized in Tableau for interactive exploration.
 
 ---
 
-## 🧠 1. Background
+## 1. Background
 
 **Dataset:** Hourly solar and wind production (MW) for mainland France (2020 → present) —  
 published by the *Commission de Régulation de l’Énergie (CRE)* to compute reference prices for variable premiums.  
@@ -54,9 +54,9 @@ Source: [Kaggle – Wind & Solar Electricity Production](https://www.kaggle.com/
 
 ---
 
-## 📊 3. Key results
+## 3. Key results
 
-### 🔹 MAE vs RMSE per model / horizon
+### MAE vs RMSE per model / horizon
 ![MAE vs RMSE](outputs/bar_mae_rmse.png)
 
 Short-term (+1 h) models clearly outperform day-ahead (+24 h) ones,  
@@ -64,7 +64,7 @@ and solar forecasts are more accurate than wind due to stronger daily seasonalit
 
 ---
 
-### 🔹 80 % coverage per model
+### 80 % coverage per model
 ![Coverage 80%](outputs/bar_coverage80.png)
 
 The coverage metric measures how many real values fall inside the [q10, q90] interval.  
@@ -72,7 +72,7 @@ Most models achieve coverage close to 80 %, meaning the uncertainty bands are we
 
 ---
 
-### 🔹 Diagnostic scatter – Wind +1 h
+### Diagnostic scatter – Wind +1 h
 ![Wind +1h diagnostic](outputs/diag_Wind_+1h.png)
 
 Scatter plot of real vs predicted power (q50).  
@@ -80,16 +80,16 @@ Points around the diagonal indicate accurate predictions; dispersion shows varia
 
 ---
 
-## 📊 4. Interactive dashboards
+## 4. Interactive dashboards
 
-[![☀️ Forecast Dashboard](https://img.shields.io/badge/View_Solar/Wind_Forecast-blue?logo=tableau)](https://public.tableau.com/app/profile/juan.carlos.aguirre1722/viz/Dashboard_project_AI/Pronsticoprobabilsticodeproduccinsolaryelica1hy24henFrancia)
-[![💨 SHAP Insights Dashboard](https://img.shields.io/badge/View_SHAP_Explainability-orange?logo=tableau)](https://public.tableau.com/app/profile/juan.carlos.aguirre1722/viz/Dashboard_project_AI/MtricaseImportancia)
+[![Forecast Dashboard](https://img.shields.io/badge/View_Solar/Wind_Forecast-blue?logo=tableau)](https://public.tableau.com/app/profile/juan.carlos.aguirre1722/viz/Dashboard_project_AI/Pronsticoprobabilsticodeproduccinsolaryelica1hy24henFrancia)
+[![SHAP Insights Dashboard](https://img.shields.io/badge/View_SHAP_Explainability-orange?logo=tableau)](https://public.tableau.com/app/profile/juan.carlos.aguirre1722/viz/Dashboard_project_AI/MtricaseImportancia)
 
 > Packaged Tableau file `Dashboard_project_AI.twbx` is also provided in this repository for offline viewing.
 
 ---
 
-## 🔬 5. Tech stack
+## 5. Tech stack
 
 - **Language:** Python 3.10  
 - **Libraries:** Pandas · NumPy · Scikit-Learn · Matplotlib · Seaborn · Statsmodels · Holidays · SHAP  
@@ -98,7 +98,7 @@ Points around the diagonal indicate accurate predictions; dispersion shows varia
 
 ---
 
-## 🚀 6. Reproducibility
+## 6. Reproducibility
 
 ```bash
 # Clone the repository
