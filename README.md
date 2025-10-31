@@ -102,7 +102,7 @@ Points around the diagonal indicate accurate predictions; dispersion shows varia
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/solar-wind-forecast.git
+git clone https://github.com/juanaguirre09/solar-wind-forecast.git
 cd solar-wind-forecast
 
 # Place the Kaggle dataset in the same folder
